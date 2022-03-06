@@ -20,6 +20,8 @@ previous_elem = first_elem
 
 # Выводим каждый последующий элемент с помощью цикла for
 for i in range(1, N + 1):
+    
+    # Находим значение элемента
     value_elem = previous_elem * q
     print(value_elem)
     previous_elem = value_elem
