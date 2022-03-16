@@ -1,27 +1,14 @@
 # 11. Сформировать список из  N членов последовательности.
 # Для N = 5: 1, -3, 9, -27, 81 и т.д.
 
-# Задача решается по формулам геометрической прогрессии.
-
-# Количество членов последовательности 
-N = int(input('Введите число N')) 
-
-# Первый елемент прогрессии
-first_elem = int(input('Введите число first_elem'))
-
-# Знаменатель прогрессии
-q = int(input('Введите число q'))
-
-# Печать первого элемента
-print(first_elem)
-
-# Предыдущему элементу присваиваем значение первого
-previous_elem = first_elem
-
-# Выводим каждый последующий элемент с помощью цикла for
-for i in range(1, N + 1):
-    
-    # Находим значение элемента
-    value_elem = previous_elem * q
-    print(value_elem)
-    previous_elem = value_elem
+N = int(input('Write number N: '))
+if N == ' ':
+    print('Incorrect number')
+else:
+    temp = 1
+    lst1 = []
+    lst1.append(temp) 
+    for i in range(N - 1):
+        temp *= -3
+        lst1.append(temp)
+    print(lst1)    
