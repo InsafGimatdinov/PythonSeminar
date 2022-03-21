@@ -9,3 +9,18 @@ for i in list(range(1, N + 1)):  # Цикл for для перебора спис
     s *= i
     lst.append(s)   # Добавляем полученный набор в lst с промощью функции append
 print(lst)
+
+# Решение с помощью функции
+
+from itertools import accumulate                                              # Вызываем модуль itertools для ввозвращения накопленной
+                                                                              # суммы произведения accumulate
+import operator                                                               # Модуль оператор для работы с двумя входными данными
+
+N = int(input('Write number N: '))                                            # Пользователь вводит число
+
+def find_product(N):                                                          # Создаем функцию для поиска произведения чисел
+    
+    return list(accumulate([x for x in range(1, N + 1)], operator.multiply))  # Возвращаем так называемый набор или список
+                                                                              # заполненный после накопления произведений
+
+print('multiply = ', find_product(N))                                         # Вызов функции нахождения проиведения
