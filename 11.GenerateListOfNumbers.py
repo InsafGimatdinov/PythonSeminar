@@ -15,9 +15,17 @@
 
 # Возможно решение и с помощью функции
 
-N = int(input('Write number N: '))          # Вводим число N
+# N = int(input('Write number N: '))          # Вводим число N
 
-def get_list(N):                            # Создаем функцию получения списка из последовательности
-    return [((-3)**i) for i in range(N)]    # Возвращаем заполненный список
-print(get_list(N))                          # Вызываем функцию через print
+# def get_list(N):                            # Создаем функцию получения списка из последовательности
+#     return [((-3)**i) for i in range(N)]    # Возвращаем заполненный список
+# print(get_list(N))                          # Вызываем функцию через print
         
+# Еще одно решение но короткое
+lst = []
+N = int(input('Write number N: '))
+n = 1
+for i in range(N): 
+    lst.append(n)
+    n *= -3
+print(lst)
