@@ -31,7 +31,7 @@ def create_polynom(list_of_items):
             
             if k != 1: 
                 
-                result += 'x'
+                result += '*x^'
             
         if list_of_items[item][k] == 1:
             
